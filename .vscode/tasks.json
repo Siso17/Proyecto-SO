@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "C/C++: Compilar Proyecto Completo (MinGW / GCC)",
+            "command": "g++",
+            "args": [
+                "-O2",
+                "-Wall",
+                "-Wextra",
+                "-I${workspaceFolder}/include",
+                "${workspaceFolder}/src/main.cpp",
+                "${workspaceFolder}/src/pcb.cpp",
+                "${workspaceFolder}/src/scheduler.cpp",
+                "${workspaceFolder}/src/cli.cpp",
+                "-o",
+                "${workspaceFolder}/main.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
